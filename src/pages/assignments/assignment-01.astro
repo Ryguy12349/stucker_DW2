@@ -37,6 +37,7 @@ export const pageTitle = "Assignment 01";
         alt="View of the Catskill Mountains near Tannersville"
         class="hero-image"
       />
+    </section>
       <section class="section-activity" id="hike">
         <div class="section-text-panel">
           <h2>Hike</h2>
@@ -165,5 +166,66 @@ export const pageTitle = "Assignment 01";
   /* importing fonts */
   @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+  *{
+    margin: 0;
+  }
+
+  body{
+    background-color: #ffffff;
+
+  }
+
+  nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+  }
+
+  .nav-branding{
+    font-family: 'bree serif';
+  }
+
+  .nav-btn{
+    background-color: #174A28;
+    color: #FFD1A8;
+    font-family: 'bree serif';
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-size: 20px;
+
+  }
+
+  .section-hero {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    position: relative;
+  justify-content: center;
+    align-items: center;
+  }
+  .hero-image{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-text-block{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 100;
+    width: 400px;
+    padding: 32px;
+  }
+
+  .section-activity{
+    min-width: auto;
+    max-width: 1200px;
+  }
+
   
+
 </style>
