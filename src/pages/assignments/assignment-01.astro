@@ -172,7 +172,14 @@ export const pageTitle = "Assignment 01";
 
   body{
     background-color: #ffffff;
+    font-family: 'bree serif';
 
+  }
+
+  header{
+    background-color: #F2F2F0;
+    padding: 10px 8vw;
+    align-self: stretch;
   }
 
   nav{
@@ -181,20 +188,36 @@ export const pageTitle = "Assignment 01";
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+  }
+
+  h2{
+    font-family: 'bree serif';
+  }
+
+  p{
+    font-family: 'inter';
 
   }
 
+  .page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .nav-branding{
+    font-size: 1.25em;
     font-family: 'bree serif';
+
   }
 
   .nav-btn{
     background-color: #174A28;
     color: #FFD1A8;
     font-family: 'bree serif';
-    padding: 16px 32px;
+    padding: 8px 16px;
     border-radius: 4px;
-    font-size: 20px;
+    font-size: 1em;
 
   }
 
@@ -203,9 +226,10 @@ export const pageTitle = "Assignment 01";
     width: 100%;
     height: 600px;
     position: relative;
-  justify-content: center;
+    justify-content: center;
     align-items: center;
   }
+
   .hero-image{
     position: absolute;
     top: 0;
@@ -221,11 +245,87 @@ export const pageTitle = "Assignment 01";
     padding: 32px;
   }
 
-  .section-activity{
-    min-width: auto;
-    max-width: 1200px;
+  h1{
+    font-family: 'bree serif';
+    font-weight: 400;
   }
 
-  
+  .hero-text-block p {
+    padding-top: 6%;
+    font-size: .8em;
+  }
+
+  .section-activity{
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    background-color: #F2F2F0;
+  }
+
+  .section-reverse{
+    flex-direction: row-reverse;
+}
+
+  .section-image {
+    width: 800px;
+    height: 500px;
+    object-fit: contain;
+  }
+
+  .section-text-panel{
+    padding: 5em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .btn-cta{
+    color: #3A6EA5;
+    border: #3A6EA5 solid 2px;
+    border-radius: 8px;
+    padding: 8px 16px;
+    align-self: flex-start;
+  }
+
+  .explore{
+    width: 800px;
+    margin: 40px 0;
+  }
+
+  .big-text{
+    font-family: 'inter';
+    font-size: 1.5em;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+
+  }
+
+  .places-grid{
+    width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 80px;
+  }
+
+  .places-tile{
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    background-color: #FFD1A8;
+    text-align: center;
+    font-family: 'inter';
+  }
+
+  .places-name{
+    font-size: .9em;
+    font-weight:700;
+  }
+
+  .places-location{
+    font-size: .75em;
+
+  }
+
 
 </style>
