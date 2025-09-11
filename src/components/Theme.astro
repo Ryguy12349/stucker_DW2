@@ -20,18 +20,23 @@ import "@fontsource-variable/dm-sans";
   }
   
   body {
+   margin: 0;
     font-family: var(--font-primary);
     background-color: var(--color-bg);
     color: var(--color-text);
   }
   a {
     color: var(--color-primary);
-    text-decoration: underline var(--color-ternary) 1.5px;
-    text-underline-offset: 0.2em;
+    text-decoration: none;
     position: relative;
     z-index: 1;
+    padding: .25em;
+    border-radius: .5em;
   }
   a:hover {
+    color: var(--color-bg);
+    background-color: var(--color-text);
+
   }
 
   h1,
