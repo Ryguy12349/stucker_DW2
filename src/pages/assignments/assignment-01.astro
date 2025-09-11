@@ -170,7 +170,7 @@ export const pageTitle = "Assignment 01";
     margin: 0;
   }
 
-  body{
+  .page-container{
     background-color: #ffffff;
     font-family: 'bree serif';
 
@@ -311,22 +311,28 @@ export const pageTitle = "Assignment 01";
 
   }
 
-  .places-grid{
+  /* .places-grid{
     width: 1200px;
     display: flex;
     flex-flow: row wrap;
     padding: 0 80px;
     margin-bottom: 5%;
+    align-items: stretch;
   }
 
   .places-tile{
     padding-top: 1%;
     width: 200px;
-    height: 100px;
     justify-content: center;
     background-color: #FFD1A8;
+    border-radius: 0%;
     text-align: center;
     font-family: 'inter';
+  }
+
+  .places-tile:hover{
+    background-color: var(--color-primary);
+    color: #FFD1A8;
   }
 
   .places-name{
@@ -337,7 +343,24 @@ export const pageTitle = "Assignment 01";
   .places-location{
     font-size: .75em;
 
+  } */
+
+  .places-grid{
+    margin: 2% 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
   }
 
+  .places-tile{
+    border-radius: 0%;
+    background-color: #FFD1A8;
+    
+  }
+  .places-name{
 
+  }
+  .places-location{
+
+  }
 </style>
