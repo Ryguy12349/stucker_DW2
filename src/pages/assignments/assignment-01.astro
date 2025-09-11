@@ -173,10 +173,12 @@ export const pageTitle = "Assignment 01";
   .page-container{
     background-color: #ffffff;
     font-family: 'bree serif';
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  header{
+   header{
     background-color: #F2F2F0;
     padding: 10px 8vw;
     align-self: stretch;
@@ -188,6 +190,8 @@ export const pageTitle = "Assignment 01";
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    align-items: stretch;
+
   }
 
   h2{
@@ -197,12 +201,6 @@ export const pageTitle = "Assignment 01";
   p{
     font-family: 'inter';
 
-  }
-
-  .page-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   .nav-branding{
@@ -263,8 +261,9 @@ export const pageTitle = "Assignment 01";
   .section-activity{
     display: flex;
     justify-content: center;
-    width: 1200px;
+    align-items: center;
     background-color: #F2F2F0;
+    width: 1200px;
   }
 
   .section-reverse{
@@ -278,7 +277,7 @@ export const pageTitle = "Assignment 01";
   }
 
   .section-text-panel{
-    padding: 5em 2em;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -311,7 +310,7 @@ export const pageTitle = "Assignment 01";
 
   }
 
-  /* .places-grid{
+  .places-grid{
     width: 1200px;
     display: flex;
     flex-flow: row wrap;
@@ -343,9 +342,9 @@ export const pageTitle = "Assignment 01";
   .places-location{
     font-size: .75em;
 
-  } */
+  }
 
-  .places-grid{
+  /* .places-grid{
     margin: 2% 2em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -362,5 +361,5 @@ export const pageTitle = "Assignment 01";
   }
   .places-location{
 
-  }
+  } */
 </style>
