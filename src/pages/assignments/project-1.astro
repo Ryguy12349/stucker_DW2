@@ -4,24 +4,55 @@ export const pageTitle = "Project 1";
 ---
 
 <Layout compact title={pageTitle}>
-<div class="index-main">
+<header class="pt1-head">
 
-  <h1>Sample Assignment</h1>
-  <p>You can use this file as a template for your assignments.</p>
-  <p>
-    There are two possible layouts for assignment pages - normal and compact.
-    Normal layout features the navigation panel along the left side of the
-    screen, while compact layout makes the navigation collapse into a menu
-    button on the right side of the screen. You can enable the compact layout by
-    adding the <code>compact</code> prop to the Layout component:
-  </p>
-  <pre><code>&lt;Layout compact title="Page Title"&gt;</code></pre>
-  <p>
-    In Astro, we usually write styling in a <code>&lt;style&gt;</code> tag within
-    each component file. This lets us keep the styles for each component together
-    with the component itself. Styles that are written in one component will not
-    affect other components or pages, even if you use the same class names.
-  </p>
+</header>
+<div>
+  <section class="aboutUs">
+    <h2>About Us</h2>
+    <p>Welcome to our quote community! A place where words are collected, shared, and celebrated. Think of it as a living library of inspiration, built by people who love meaningful ideas. You can explore quotes from timeless thinkers, writers, and everyday voices, then save your favorites by pinning or liking them to your personal collection. Each day we highlight a handful of quotes in our Featured section — words that stood out for their insight, humor, or beauty. Whether you come here to reflect, to gather motivation, or simply to enjoy the craft of language, this is your space to discover and share the power of words.</p>
+  </section>
+  <section class="featured">
+    <h2>Featured</h2>
+   <details>
+     <summary> “It is not death a man should fear, but he should fear never beginning to live.”</summary>
+     <h3>Marcus Aurelius • 121 to 180 CE • Stoic Philosophy</h3>
+     Aurelius reminds us that mortality itself should not terrify us, for death is natural and inevitable. The greater tragedy lies in letting fear, hesitation, or distraction keep us from truly living. To begin living is to act with purpose, to align with our values, and to experience the fullness of life. Reflection here asks: what parts of life am I delaying, and how might I choose to live more boldly today?
+   </details>
+
+   <details>
+     <summary>“Do what you can with what you have, where you are.”</summary>
+     <h3>Theodore Roosevelt • 1858 to 1919 • Pragmatism / Practical Philosophy</h3>
+     Roosevelt’s words cut through excuses. We often wait for the perfect tools, the right timing, or more resources before starting. But life rarely provides perfect conditions. Strength comes from making progress with what is at hand, no matter how small. This philosophy pushes us toward adaptability and resilience: what matters is not the ideal starting point, but the courage to begin.
+   </details>
+
+   <details>
+     <summary>“The journey of a thousand miles begins with one step.”</summary>
+      <h3>Lao Tzu • 6th century BCE (traditional) • Taoist Philosophy</h3>
+      This ancient wisdom teaches the value of beginnings. The scale of our goals often intimidates us, and yet every monumental achievement starts with a single choice to move forward. Lao Tzu emphasizes harmony with the natural flow of things — progress is built one step at a time. The reflection here asks: what overwhelming challenge could I break down into its very first step, trusting that momentum will follow?
+   </details>
+
+   <details>
+     <summary>“Anything worth doing is worth doing badly.”</summary>
+      <h3>G.K. Chesterton • 1874 to 1936 • Christian Philosophy / Literary Philosophy</h3>
+      Chesterton’s words confront the perfectionist within us. Too often, we avoid action because we fear failure or imperfection. But in truth, mastery is built upon countless clumsy beginnings. To do something badly is not a waste — it is the first stage of learning. This perspective frees us to try, experiment, and stumble without shame, knowing that the act of doing itself is valuable. What might I attempt if I released the need for immediate excellence?
+   </details>
+
+   <details>
+     <summary>“The day you plant the seed is not the day you eat the fruit.”</summary>
+      <h3>Anonymous (Proverb) • Timeless wisdom • Agrarian / Practical Philosophy</h3>
+      This proverb speaks to the universal truth of patience. Growth requires time, persistence, and trust in unseen processes. When we plant seeds — whether of habit, learning, or relationship — we must tend them with care long before we enjoy the results. It reminds us that disappointment in slow progress overlooks the silent growth taking place beneath the surface. Where in my life must I practice patience, trusting that fruit will come in its season?
+   </details>
+  </section>
+  <section class="signUpToday">
+    <h2>Sign Up Today!</h2>
+    <p>Create an account to unlock the full experience. With an account, you can like and pin quotes that speak to you, building your own personalized collection of wisdom. Signing up also lets you join a growing community of readers and thinkers who value the power of ideas. Don’t just browse — make it your own. Sign up today and start saving the words that inspire you most.</p>
+    
+  </section>
+
+<footer class="pt1-foot">
+
+</footer>
 </div>
 </Layout>
 
