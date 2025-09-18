@@ -364,5 +364,84 @@ export const pageTitle = "A. 01 Responsive";
 
   } */
 
-  
+  @media (max-width: 600px){
+    .page-container{
+      /* color: red; */
+    }
+    
+  .section-hero {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+ 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image{
+    position: unset;
+    height: 400px;
+    overflow: hidden;
+
+  }
+  .hero-text-block{
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 100;
+    width: 100%;
+    padding: 32px;
+  }
+
+  .section-activity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F0;
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  .section-reverse{
+    flex-direction: column;
+  }
+
+  .section-image {
+    width: 100vw;
+    height: 500px;
+    object-fit: contain;
+  }
+
+  .section-text-panel{
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .explore{
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  .places-grid{
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 8%;
+    margin-bottom: 5%;
+    align-items: stretch;
+  }
+
+  .places-tile{
+    padding-top: 1%;
+    width: 200px;
+    justify-content: center;
+    background-color: #FFD1A8;
+    border-radius: 0%;
+    text-align: center;
+    font-family: 'inter';
+  }
+
+  }
+
+
 </style>
