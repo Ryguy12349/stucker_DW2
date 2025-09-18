@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import modTurtle from "@assets/mc_turtle.webp";
 ---
 
 <Layout title="Home">
@@ -9,7 +11,11 @@ import Layout from "../layouts/Layout.astro";
    
     <section class="turtle_Minecraft">
       <h2> I like turtles:</h2>
-      <img class="modded_turtle" src="src/assets/mc_turtle.webp" width="150px" alt="Modded Minecraft Turtle"/>
+      <Image
+        src={modTurtle}
+        alt="Modded Minecraft Turtle"
+        class="modded_turtle"
+      />
     </section>
     <p>
     Here is the link to the site you are on now <a href="https://stucker-dw2.netlify.app" target="_blank">stucker-dw2.netlify.app</a>
@@ -27,6 +33,7 @@ import Layout from "../layouts/Layout.astro";
 
   .modded_turtle{
     align-self: center;
+    width= 150px;
   }
 
 </style>
