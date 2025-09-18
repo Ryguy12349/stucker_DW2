@@ -1,8 +1,10 @@
 ---
+const {title="Button Off", link="https://www.curseforge.com/minecraft/mc-mods/computercraft"} = Astro.props;
+
 
 ---
 
-<a class="home-btn" href="/">What Am I</a>
+<a class="home-btn" href={link} target="_blank" >{title}</a>
 
 <style>
     .home-btn{
