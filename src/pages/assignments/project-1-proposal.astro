@@ -1,14 +1,17 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 export const pageTitle = "Project 1 Proposal";
+import Button from "@components/Button.astro";
 ---
 
 <Layout title={pageTitle}>
 <div class="index-main">
 
   <h1>Project 1 Plan</h1>
- 
-    <h2>Quote Book and Explaination</h2>
+    <div>
+    <Button link="https://docs.google.com/document/d/12fnXPoDwANJf8uHAi16HcmGeNiLakylbseK1BopXTlQ/edit?usp=sharing" title="Doc'ing It"></Button>
+    </div>
+  <h2>Quote Book and Explaination</h2>
   
   <details>
     <summary> “It is not death a man should fear, but he should fear never beginning to live.”</summary>

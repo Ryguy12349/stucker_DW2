@@ -1,19 +1,21 @@
 ---
-const {title="Button Off", link="https://www.curseforge.com/minecraft/mc-mods/computercraft"} = Astro.props;
+const {title="Button Off", link="https://www.curseforge.com/minecraft/mc-mods/computercraft", textColor="var(--color-text)", bgColor="var(--color-bg)"} = Astro.props;
 
 
 ---
 
-<a class="home-btn" href={link} target="_blank" >{title}</a>
+<a class="home-btn" href={link} target="_blank" style={`--color-button-text:${textColor};--color-button-background:${bgColor}`} >{title}</a>
 
 <style>
     .home-btn{
-        display: inline-block;
-        padding: 16px;
+    display: inline-block;
+    padding: 16px;
+    color: var(--color-button-text);
+    background-color:var(--color-button-background) ;
     }
       a:hover {
-    color: var(--color-bg);
-    background-color: var(--color-text);
+    color: var(--color-button-background);
+    background-color: var(--color-button-text);
     }
 
 </style>

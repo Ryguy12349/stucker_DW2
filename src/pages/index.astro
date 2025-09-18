@@ -18,11 +18,11 @@ import Button from "@components/Button.astro";
         class="modded_turtle"
       />
     </section>
-    <p>
-    Here is the link to the site you are on now <a href="https://stucker-dw2.netlify.app" target="_blank">stucker-dw2.netlify.app</a>
-    </p>
-    <Button link="https://gd.newpaltz.edu/stucker/" title="Thesis Page"/>
-    <Button/>
+      <div class="weNeedMoreNavs">
+        <Button link="https://gd.newpaltz.edu/stucker/" title="Thesis Page"/>
+        <Button link="https://stucker-dw2.netlify.app" title="This Page '(°o°)'" />
+        <Button/>
+      </div>
    </div> 
 </Layout>
 
@@ -39,4 +39,10 @@ import Button from "@components/Button.astro";
     width= 150px;
   }
 
+  .weNeedMoreNavs {
+    display: flex;
+    background-color: #230736;
+    justify-content: flex-start;
+    flex-grow: 0;
+  }
 </style>
