@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 export const pageTitle = "Sample Assignment";
+import {Content as HungryGod} from "src/components/markdown/sample.md"
 ---
 
 <Layout title={pageTitle}>
@@ -23,6 +24,10 @@ export const pageTitle = "Sample Assignment";
     affect other components or pages, even if you use the same class names.
   </p>
 </div>
+<HungryGod>
+
+</HungryGod>
+
 </Layout>
 
 <style>

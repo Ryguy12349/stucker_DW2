@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import modTurtle from "@assets/mc_turtle.webp";
 import Button from "@components/Button.astro";
+import Accordion from "@components/Accordion.astro";
 ---
 
 <Layout title="Home">
@@ -23,6 +24,14 @@ import Button from "@components/Button.astro";
         <Button link="https://stucker-dw2.netlify.app" title="This Page '(°o°)'" />
         <Button/>
       </div>
+      <section class="accordion-play">
+        <Accordion title="“The journey of a thousand miles begins with one step.”">
+          <slot>
+              <h4>Lao Tzu • 6th century BCE (traditional) • Taoist Philosophy</h4>
+              <p>This ancient wisdom teaches the value of beginnings. The scale of our goals often intimidates us, and yet every monumental achievement starts with a single choice to move forward. Lao Tzu emphasizes harmony with the natural flow of things — progress is built one step at a time. The reflection here asks: what overwhelming challenge could I break down into its very first step, trusting that momentum will follow?</p>
+          </slot>
+        </Accordion>
+      </section>
    </div> 
 </Layout>
 
@@ -41,8 +50,6 @@ import Button from "@components/Button.astro";
 
   .weNeedMoreNavs {
     display: flex;
-    background-color: #230736;
     justify-content: flex-start;
-    flex-grow: 0;
   }
 </style>

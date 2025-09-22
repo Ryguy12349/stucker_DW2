@@ -1,0 +1,26 @@
+---
+const {title="Empty Quote", } = Astro.props
+
+---
+
+ <details class="accordion-det">
+   <summary class="accordion-sum"> {title} </summary>
+      <div class="accordion-content">
+      <slot></slot>
+      </div>
+  <style>
+   .accordion-sum {
+      background-color: aliceblue;
+
+   }
+
+   .accordion-det {
+      border: 3px solid black;
+      border-radius: .5rem;
+      max-width: 28em;
+   }
+
+   .accordion-content{
+      padding: 1rem;
+   }
+  </style>
