@@ -2,6 +2,10 @@
 import Layout from "../../layouts/Layout.astro";
 export const pageTitle = "Project 1 Proposal";
 import Button from "@components/Button.astro";
+import { Image } from "astro:assets";
+import wireframe1 from "@assets/Project-01/DW2_P1_Wireframe_1.jpg"
+import wireframe2 from "@assets/Project-01/DW2_P1_Wireframe_2.jpg"
+
 ---
 
 <Layout title={pageTitle}>
@@ -47,6 +51,17 @@ import Button from "@components/Button.astro";
      This proverb speaks to the universal truth of patience. Growth requires time, persistence, and trust in unseen processes. When we plant seeds — whether of habit, learning, or relationship — we must tend them with care long before we enjoy the results. It reminds us that disappointment in slow progress overlooks the silent growth taking place beneath the surface. Where in my life must I practice patience, trusting that fruit will come in its season?
   </details>
 </div>
+<Image
+  src={wireframe1}
+  alt="wireframe1"
+  class="modded_turtle"
+/>    
+<Image
+  src={wireframe2}
+  alt="wireframe2"
+  class="modded_turtle"
+/>
+
 
 </Layout>
 
