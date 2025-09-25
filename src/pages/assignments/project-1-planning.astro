@@ -5,7 +5,13 @@ import Button from "@components/Button.astro";
 import { Image } from "astro:assets";
 import wireframe1 from "@assets/Project-01/DW2_P1_Wireframe_1.jpg"
 import wireframe2 from "@assets/Project-01/DW2_P1_Wireframe_2.jpg"
-
+import {Content as AboutUs} from "src/components/markdown/project-1/aboutUs.md"
+import {Content as GKChesterton} from "src/components/markdown/project-1/gkChesterton.md"
+import {Content as LaoTzu} from "src/components/markdown/project-1/laoTzu.md"
+import {Content as MarcusAurelius} from "src/components/markdown/project-1/marcusAurelius.md"
+import {Content as TheodoreRoosevelt} from "src/components/markdown/project-1/theodoreRoosevelt.md"
+import {Content as Anon} from "src/components/markdown/project-1/anon.md"
+import {Content as SignUp} from "src/components/markdown/project-1/signUp.md"
 ---
 
 <Layout title={pageTitle}>
@@ -51,22 +57,63 @@ import wireframe2 from "@assets/Project-01/DW2_P1_Wireframe_2.jpg"
      This proverb speaks to the universal truth of patience. Growth requires time, persistence, and trust in unseen processes. When we plant seeds — whether of habit, learning, or relationship — we must tend them with care long before we enjoy the results. It reminds us that disappointment in slow progress overlooks the silent growth taking place beneath the surface. Where in my life must I practice patience, trusting that fruit will come in its season?
   </details>
 </div>
-<Image
-  src={wireframe1}
-  alt="wireframe1"
-  class="modded_turtle"
-/>    
-<Image
-  src={wireframe2}
-  alt="wireframe2"
-  class="modded_turtle"
-/>
 
+<div class="wireframe">
+  <Image
+    src={wireframe1}
+    alt="wireframe1"
+    class="modded_turtle"
+    width=350px
+  />    
+  <Image
+    src={wireframe2}
+    alt="wireframe2"
+    class="modded_turtle"
+    width=350px
+
+  />
+</div>
+
+<div class="lineBlock"></div>
+
+<h1>QuotePlace</h1>
+
+<AboutUs></AboutUs>
+
+<h2>Featured</h2>
+
+<h3>“Anything worth doing is worth doing badly.”</h3>
+<GKChesterton></GKChesterton>
+
+<h3>“The journey of a thousand miles begins with one step.”</h3>
+<LaoTzu></LaoTzu>
+
+<h3>“It is not death a man should fear, but he should fear never beginning to live.”</h3>
+<MarcusAurelius></MarcusAurelius>
+
+<h3>“Do what you can with what you have, where you are.”</h3>
+<TheodoreRoosevelt></TheodoreRoosevelt>
+
+<h3>“The day you plant the seed is not the day you eat the fruit.”</h3>
+<Anon></Anon>
+
+<SignUp></SignUp>
 
 </Layout>
 
 <style>
+.wireframe {
+  max-width: 710px;
+  display: flex;
+  flex-wrap: wrap;
 
+}
 
+.lineBlock {
+  margin: 2em 0;
+  height: 50px;
+  width: auto;
+  background-color: black;
+}
 
 </style>
