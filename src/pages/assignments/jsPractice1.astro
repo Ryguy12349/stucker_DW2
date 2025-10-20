@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "JS Practice";
+
+---
+
+<Layout title={pageTitle}>
+    <script>
+        document.addEventListener('mousemove', function(event) {
+            const mouseX_client = event.clientX;
+            const mouseY_client = event.clientY;
+            console.log(`Client X: ${mouseX_client}, Client Y: ${mouseY_client}`);
+        });
+    </script>
+    
+    <div class="index-main">
+
+    </div>
+
+
+
+</Layout>
+ 
