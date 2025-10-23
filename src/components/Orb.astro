@@ -1,0 +1,112 @@
+---
+const { color } = Astro.props;
+
+let grassColor = "#faf3d7";
+let skyColor = "#949185";
+
+if (color === "night") {
+    grassColor = "rgb(57, 78, 26)";
+    skyColor = "#212121";
+} else if (color === "day") {
+    grassColor = "#8cbf3f";
+    skyColor = "#4287f5";
+}
+
+---
+<script>
+
+    
+    const orbContainers = document.querySelectorAll('.orbContainer')
+
+    orbContainers.forEach( function(orbContainer, index){
+
+        const orbEl = orbContainer.querySelector('.orb');
+        const textXEl = orbContainer.querySelector('.textX');
+        const textYEl = orbContainer.querySelector('.textY');
+
+    orbContainer.addEventListener('mousemove', function(event) {
+        const mouseX_client = event.offsetX + "px";
+        const mouseY_client = event.offsetY + "px";
+
+        textXEl.textContent = `X: ${mouseX_client}`;
+        textYEl.textContent = `Y: ${mouseY_client}`;
+
+        orbEl.style.setProperty('--xPos', mouseX_client);
+        orbEl.style.setProperty('--yPos', mouseY_client);  
+
+        // console.log(`Client X: ${mouseX_client}, Client Y: ${mouseY_client}`);
+    });
+
+    })
+
+
+    
+</script>
+
+<div class="hero">
+    <div class="orbContainer" style={`--sky-color: ${skyColor}`}>
+        <div class="orb">
+                <!-- <Image src={orbImage} alt="A glowing orb" class="orb-image"/> -->
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="25" stroke-width="4" fill="#fdffde" />
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+            </div>    
+
+        <div class="textContainer">
+            <h2>Move your mouse around to see the orb follow!</h2>
+                <div class="containerCords">
+                    <p class="textX"></p>
+                    <p class="textY"></p>
+                </div>
+        </div>
+    </div>    
+    <div class="grass" style={`--grass-color: ${grassColor};`}>
+        <span></span>
+    </div>
+</div>
+
+<style>
+    .hero{
+
+    }
+
+    .grass{
+        display: block;
+        background-color: var(--grass-color);
+        height: 40vh;
+    }
+
+    .orbContainer {
+        padding: 2.5rem;
+        height: 60vh;
+        position: relative;
+        background-color: var(--sky-color);
+        color: white;
+        overflow: hidden;
+    }
+
+    .orb{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: var(--yPos);
+        left: var(--xPos);
+        pointer-events:none;
+    }
+
+    .orb-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .containerCords {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .textContainer{
+        pointer-events:none;
+    }
+
+</style>
