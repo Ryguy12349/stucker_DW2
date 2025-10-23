@@ -2,22 +2,79 @@
 import Layout from "../../layouts/Layout.astro";
 export const pageTitle = "JS Practice";
 
+import {Image} from "astro:assets";
+import orbImage from "@assets/js-practice/207.jpg";
+
 ---
 
-<Layout title={pageTitle}>
+<Layout compact title={pageTitle}>
     <script>
+
+        const orbEl = document.querySelector('.orb');
+        const textXEl = document.querySelector('.textX');
+        const textYEl = document.querySelector('.textY');
+
         document.addEventListener('mousemove', function(event) {
-            const mouseX_client = event.clientX;
-            const mouseY_client = event.clientY;
+            const mouseX_client = event.clientX + "px";
+            const mouseY_client = event.clientY + "px";
+
+            textXEl.textContent = `X: ${mouseX_client}`;
+            textYEl.textContent = `Y: ${mouseY_client}`;
+
+            orbEl.style.setProperty('--xPos', mouseX_client);
+            orbEl.style.setProperty('--yPos', mouseY_client);  
+
             console.log(`Client X: ${mouseX_client}, Client Y: ${mouseY_client}`);
         });
+        
+
+
+        
     </script>
-    
-    <div class="index-main">
+    <div>
+         <div class="orb">
+                <Image 
+                    src={orbImage} 
+                    alt="A glowing orb" 
+                    class="orb-image"
+                />
+            </div>    
 
-    </div>
-
-
+        <div class="container">
+            <h2>Move your mouse around to see the orb follow!</h2>
+                <div class="containerCords">
+                    <p class="textX"></p>
+                    <p class="textY"></p>
+                </div>
+        </div>
+    </div>    
 
 </Layout>
  
+<style>
+
+    .container {
+        padding: 2.5rem;
+        height: 100vh;
+        position: relative;
+    }
+
+    .orb{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: var(--yPos);
+        left: var(--xPos);
+    }
+
+    .orb-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .containerCords {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+</style>
