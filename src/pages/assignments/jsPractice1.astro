@@ -4,18 +4,45 @@ export const pageTitle = "JS Practice";
 
 import Orb from "@components/Orb.astro";
 
+    const sayHello = function (name = "world"){
+        // console.log('Hello ' + name);
+        const hey = 'Hello ' + name;
+        return hey;
+    };
 
+ 
 ---
+
+<script>
+
+    const myButton = document.querySelector(`.btn`);
+
+   const hiBtn = function () {
+        alert("Button was clicked");
+    };
+
+    myButton.addEventListener("click",hiBtn)
+
+</script>
 
 <Layout compact title={pageTitle}>
     <Orb color="night"></Orb>
     <Orb color="day"></Orb>
     <Orb color=" "></Orb>
 
+    <div class="space">
+        <p class="sayHello">{sayHello('ryan')}</p>
+
+        <button class="btn"></button>
+    </div>
+
 </Layout>
  
 <style>
 
-
+    .space{
+        height: 40vh;
+        padding: 2.5rem;
+    }
 
 </style>
