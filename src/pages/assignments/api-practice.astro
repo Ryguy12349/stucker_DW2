@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "Api Practice Assignment";
+
+const data = await fetch("https:/api.thecatapi.com/v1/breeds");
+const cats = await data.json();
+
+---
+
+<Layout title={pageTitle}>
+<div class="index-main">
+
+
+{cats.map(function(cats){
+  return <li><a href={cats.wikipedia_url} target="_blank">{cats.name}</a></li>
+})}
+
+
+</div>
+
+
+</Layout>
+
+<style>
+  h1 {
+    color: blue;
+  }
+</style>
