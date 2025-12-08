@@ -1,18 +1,24 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
 export const pageTitle = "Api Practice Assignment";
 
 const data = await fetch("https:/api.thecatapi.com/v1/breeds");
 const cats = await data.json();
+
 
 ---
 
 <Layout title={pageTitle}>
 <div class="index-main">
 
+{catsImg.map(function(cat){
+  return <Image src={catsImg.url} alt=" "></Image>
+})}
 
 {cats.map(function(cats){
-  return <li><a href={cats.wikipedia_url} target="_blank">{cats.name}</a></li>
+
+  return  <li> <a href={cats.wikipedia_url} target="_blank">{cats.name}</a></li>
 })}
 
 
