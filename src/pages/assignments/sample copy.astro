@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "Final Project";
+
+---
+
+<Layout title={pageTitle}>
+<div class="index-main">
+
+  <h1>{pageTitle}</h1>
+  <p>This is the live site, <a href="https://stucker-ryan.netlify.app/">My Portfolio</a>.</p>
+
+
+</div>
+
+</Layout>
+
+<style>
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-text);
+    transition: color 0.5s ease;
+  }
+</style>
